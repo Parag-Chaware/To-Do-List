@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+  </head>
+  <body>
+    <div class="header">
+      <img src="images/todo.png" alt="logo" />
+    </div>
+    <div class="content">
+      <form class="form" id="form">
+        <input
+          type="text"
+          placeholder="Enter Your Todo-list Task"
+          name="task"
+          required
+        />
+        <select name="priority" required>
+          <option>Select Priority</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select name="status" required>
+          <option>Select Status</option>
+          <option value="todo">ToDo</option>
+          <option value="inprogress">InProgress</option>
+          <option value="completed">completed</option>
+        </select>
+        <input type="date" name="date" required />
+        <button class="finalBtn" type="submit">Add Task</button>
+      </form>
+    </div>
+    <div class="priority-bar">
+      <p class="show-item-number">To-do list <span class="counter">0</span></p>
+      <p>High Priority <span class="counterHigh">0</span></p>
+    </div>
+    <div class="wrapper">
+      <input
+        class="search_task"
+        type="text"
+        id="searchInput"
+        placeholder="Enter task name to Search"
+      />
+      <div>
+        <label for="priorityFilter">Filter by Priority:</label>
+        <select id="priorityFilter">
+          <option value="all">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="statusFilter">Filter by Status:</label>
+        <select id="statusFilter">
+          <option value="all">All</option>
+          <option value="todo">To-Do</option>
+          <option value="inprogress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card"></div>
+
+    <div class="modal hide-modal" id="editModal">
+      <div class="modal-content">
+        <div class="close-wrapper">
+          <h2>Edit Task</h2>
+          <button class="close-modal">
+            <i class="fa-solid fa-xmark fa-2xl"></i>
+          </button>
+        </div>
+
+        <form class="editForm">
+          <label for="editedTask">Task:</label>
+          <input type="text" id="editedTask" name="editedTask" />
+          <label for="editedDate">Date:</label>
+          <input type="date" id="editedDate" name="editedDate" />
+          <label for="editedPriority">Priority:</label>
+          <select id="editedPriority" name="editedPriority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <select name="editStatus">
+            <option>Select Status</option>
+            <option value="todo">ToDo</option>
+            <option value="inprogress">InProgress</option>
+            <option value="completed">Completed</option>
+          </select>
+          <br />
+          <button type="submit" id="updateBtn" class="updateBtn">Update</button>
+        </form>
+      </div>
+    </div>
+    <div class="status">
+      <p>Todo <span class="todo">0</span></p>
+      <p>InProgress <span class="inprogress">0</span></p>
+      <p>Completed <span class="completed">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- This is the final code  -->

@@ -1,0 +1,246 @@
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  background-color: #191919;
+  color: white;
+}
+.header {
+  background-color: black;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+input[type="text"] {
+  width: 350px;
+  background-color: #191919;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 30px;
+  font-size: 15px;
+}
+input[type="date"] {
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #191919;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.finalBtn {
+  padding: 16px 25px 16px 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: #1e6f9f;
+  font-weight: bold;
+  border: none;
+}
+button:enabled {
+  cursor: pointer;
+}
+.circle {
+  text-align: center;
+  padding: 1px solid white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+select {
+  padding: 16px 25px 16px 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #191919;
+  font-weight: bold;
+  border: none;
+}
+.priority-bar {
+  margin-left: 265px;
+  margin-right: 265px;
+  color: #1e6f9f;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  margin-left: 360px;
+  margin-right: 360px;
+  height: 320px;
+  overflow-y: scroll;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.card-content {
+  background-color: #262626;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-content:hover {
+  transform: translateY(-5px);
+}
+
+.card-content span {
+  font-size: 14px;
+  color: white;
+}
+
+.card-content p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: white;
+  font-weight: normal;
+}
+
+.card-content div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card-content button:hover {
+  background-color: #007bb5;
+}
+
+.card-content i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.hide-modal {
+  display: none;
+}
+.show-modal {
+  display: inline-block;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* Style the update button */
+#updateBtn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+#updateBtn:hover {
+  background-color: #007bb5;
+}
+.counter {
+  height: 40px;
+  width: 50px;
+  background-color: #333333;
+  padding: 4px;
+  border-radius: 50%;
+  color: white;
+}
+
+.show-item-number {
+  padding: 10px;
+}
+.counterHigh {
+  height: 40px;
+  width: 50px;
+  background-color: #333333;
+  padding: 4px;
+  border-radius: 50%;
+  color: white;
+}
+.status {
+  margin-left: 360px;
+  margin-right: 360px;
+  display: flex;
+  justify-content: space-between;
+  color: #007bb5;
+  margin-top: 60px;
+  z-index: 100;
+}
+.todo,
+.inprogress,
+.completed {
+  height: 40px;
+  width: 50px;
+  background-color: #333333;
+  padding: 4px;
+  border-radius: 50%;
+  color: white;
+}
+.search_task {
+  margin-left: 265px;
+  margin-bottom: 20px;
+}
+.filterText {
+  color: white;
+}
+.wrapper {
+  display: flex;
+}
+.wrapper > div {
+  margin-left: 30px;
+}
+label {
+  color: white;
+}
+.editForm > input {
+  margin: 20px;
+}
+.modal-content {
+  background-color: #191919;
+  margin-top: 200px;
+}
+.close-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.close-modal {
+  padding-left: 20px;
+  padding-right: 20px;
+}
